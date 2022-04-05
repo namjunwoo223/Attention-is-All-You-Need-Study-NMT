@@ -5,7 +5,7 @@ AiHub데이터로 Attention 공부 및 NMT 모델 제작
 나동빈님의 code practice를 기초로 Transformer의 구조를 이해하고 적용해보는 repository입니다.
 예시에서는 영어와 독일어를 번역하는 모델로 나왔으나, 커스텀 데이터로 적용을 해 보는게 이해에 가장 빠를 것 이라 생각하여
 Aihub 데이터 중 한국어-일본어 말 뭉치 데이터를 이용하였으며 데이터셋이 바뀜으로 코드를 조금 수정하여 진행하였습니다.
-일본어 Tokenizer는 spacy에 있는 `ja_core_news_md`를 이용하여 tokenize를 진행하였고 한국어의 경우 konlpy의 Otk를 이용하여 토크나이징을 진행하였습니다.
+일본어 Tokenizer는 spacy에 있는 `ja_core_news_md`를 이용하여 tokenize를 진행하였고 한국어의 경우 konlpy의 `Otk`를 이용하여 토크나이징을 진행하였습니다.
 
 # Data
 한국어-일본어 말 뭉치 : https://aihub.or.kr/aidata/30723
