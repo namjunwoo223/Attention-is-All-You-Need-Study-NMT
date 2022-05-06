@@ -13,7 +13,7 @@ Aihub 데이터 중 한국어-일본어 말 뭉치 데이터를 이용하여 NMT
 # 문제점
 기존 나동빈님의 코드에는 torchtext의 0.6.0의 버전에서 지원하는 Filed를 사용하는 dataset방식을 차용하셨습니다만, 
 이 경우 Tokenizer가 spacy로 만들어야 제대로 된 Tokenizing이 되는 것을 확인하였으며, 아쉽게도 spacy는 일본어 Tokenizer는 지원했지만 한국어 Tokenizer는 지원하지 않았습니다.
-따라서, 저 같은 경우 직접 데이터 선언 부분을 torchtext에서 지원하는 방식과 비슷하게 Vocab dictionary, dataset 코드를 새로 제작하였습니다.
+따라서, 직접 데이터 선언 부분을 torchtext에서 지원하는 방식과 비슷하게 Vocab dictionary, dataset 코드를 새로 제작하였습니다.
 다만, 개인적으로 아쉬운 점은 데이터량이 많아 질 수록 Vocab크기가 커지며 학습속도와 처리속도가 느렸습니다.
 나중에 좀 더 다듬을 수 있는 방법을 고민해 보고 싶습니다.
 
