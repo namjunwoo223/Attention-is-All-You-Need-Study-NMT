@@ -22,7 +22,7 @@ Aihub 데이터 중 한국어-일본어 말 뭉치 데이터를 이용하여 NMT
 코드 작성 방법을 고민하면서 학습하였고 모르는 것들이 있다면 나동빈님의 유튜브와 논문 리뷰등을 활용하면서 공부를 진행하였습니다.
 각자 편한 방식으로 공부하시면 좋을 것 같습니다.
 
-
+# Reference
 나동빈님 Attention is All you Need 논문 뿌수는 유튜브 : https://www.youtube.com/watch?v=AA621UofTUA
 
 나동빈님 Attention is All you Need Code Practice : https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice/blob/master/code_practices/Attention_is_All_You_Need_Tutorial_(German_English).ipynb
