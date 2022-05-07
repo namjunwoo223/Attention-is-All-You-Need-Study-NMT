@@ -18,6 +18,37 @@ Aihub 데이터 중 한국어-일본어 말 뭉치 데이터를 이용하여 NMT
 또한, 어느정도 번역이 동작하긴 하지만, vocab의 의존이 높고 말이 안되게 출력되는 경우도 확인하였습니다.
 나중에 좀 더 다듬을 수 있는 방법을 고민해 보고 싶습니다.
 
+# 추가
+기존 코드에서 vocab구축에 있어서 시간이 많이 드는 단점을 직렬화를 통해 해결 할 수 있을 것 같습니다.
+또한 Okt랑 mecab의 처리속도가 많은 차이가있습니다.
+
+실제로 진행을 해본 결과로 모든 데이터의 형태소분리를 Okt는 5시간이 소요됬지만 mecab의 경우 40분이 소요되었습니다.
+
+직접, mecab vocab을 제작하셔도 무방하지만 제가 제작한 vocab파일을 pickle의 라이브러리로 저장하여 공유하겠습니다.
+추후, okt vocab도 만들어서 공유하겠습니다.
+
+당신의 시간은 소중하니까요
+
+일본어 mecab vocab : https://drive.google.com/file/d/1-BXe2XT4rMl518Voy6eWsqYztPusaP-T/view?usp=sharing
+
+한국어 mecab vocab : https://drive.google.com/file/d/1-81x5rHQ5eqNsfb5tferKSZcoE0YYeKd/view?usp=sharing
+
+
+    import pickle
+
+    with open('/content/drive/MyDrive/my/jp_vocab.pkl', 'rb') as f:
+      jp_vocab_dict.word_dict = pickle.load(f)
+
+    with open('/content/drive/MyDrive/my/kr_vocab.pkl', 'rb') as f:
+      kr_vocab_dict.word_dict = pickle.load(f)
+      
+      
+ vocab 파일 다운로드 후 vocab 객체를 선언 후에 word_dict에 직접적으로 선언해주시면 되겠습니다.
+
+또한, 학습데이터의 개수가 많아짐에 따라서 학습속도가 느려지고 Vram의 요구가 많아지는데 저 같은 경우 이것의 해결법으로 TPU로 돌려보는 방향으로 보고있습니다.
+
+코드를 계속 테스트중이며 잘 되면 추후 공유하겠습니다.
+
 # 공부 방식
 저 같은 경우 코드 내 함수 였던 Transformer -> Encoder -> Decoder 순으로 코드와 논문을 번갈아가며 보면서 
 코드 작성 방법을 고민하면서 학습하였고 모르는 것들이 있다면 나동빈님의 유튜브와 논문 리뷰등을 활용하면서 공부를 진행하였습니다.
