@@ -8,7 +8,7 @@ Aihub 데이터 중 한국어-일본어 말 뭉치 데이터를 이용하여 NMT
 일본어 Tokenizer는 spacy에 있는 `ja_core_news_md`를 이용하여 tokenize를 진행하였고 한국어의 경우 konlpy의 `Otk`를 이용하여 토크나이징을 진행하였습니다.
 
 # Data
-한국어-일본어 말 뭉치 : https://aihub.or.kr/aidata/30723
+한국어-일본어 말 뭉치 : https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=127
 
 # 문제점
 기존 나동빈님의 코드에는 torchtext의 0.6.0의 버전에서 지원하는 Filed를 사용하는 dataset방식을 차용하셨습니다만, 
